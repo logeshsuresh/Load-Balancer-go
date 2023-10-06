@@ -18,4 +18,29 @@ This is a simple Go-based load balancer that distributes incoming HTTP requests 
 
    ```bash
    git clone https://github.com/yourusername/your-load-balancer.git
-   cd your-load-balancer
+   
+
+
+2. Run 
+   
+   ```bash 
+   go run main.go
+
+The load balancer will start serving requests on localhost:8000
+
+## Configuration 
+
+You can configure the backend servers by modifying the servers slice in the main function of the main.go file. Simply add or remove instances of the newSimpleServer function to specify your backend servers.
+
+```
+    servers := []Server {
+        newSimpleServer("https://www.example.com"),
+        newSimpleServer("https://www.anotherexample.com"),
+        // Add more backend servers here as needed
+    }
+
+```
+
+## Usage
+
+The load balancer will distribute incoming requests among the configured backend servers using a round-robin approach. Requests can be made to the load balancer's address (e.g., http://localhost:8000) to have them proxied to one of the backend servers.
