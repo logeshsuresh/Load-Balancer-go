@@ -17,7 +17,7 @@ This is a simple Go-based load balancer that distributes incoming HTTP requests 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-load-balancer.git
+   git clone https://github.com/yourusername/your-load-balancer.git](https://github.com/logeshsuresh/Load-Balancer-go.git
    
 
 
